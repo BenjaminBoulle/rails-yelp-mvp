@@ -1,0 +1,16 @@
+<h1>Restaurantes</h1>
+<ul>
+<%@restaurants.each do |restaurant| %>
+  <li>
+    <%= link_to restaurant.name, restaurant_path(restaurant) %>
+    <%= link_to edit_restaurant_path(restaurant) do %>
+      <i class="fa-regular fa-pen-to-square"></i>
+    <% end %>
+  </li>
+<% end %>
+</ul>
+
+<%= link_to new_restaurant_path() do %>
+  add Restaurante
+  <i class="fa-solid fa-plus"></i>
+<% end %>
